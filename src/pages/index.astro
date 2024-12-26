@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import Instagram from "../components/icons/Instagram.astro";
+import Github from "../components/icons/Github.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import Button from "../components/Button.astro";
+---
+
+<Layout>
+  <section class="w-full lg:w-[740px] mx-auto py-40">
+      <h1 class="flex flex-row justify-center text-5xl font-bold gap-x-4 pb-4">Hola, soy Matias <div class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></div>
+    </h1>
+    <h2 class="text-xl opacity-80 text-center">
+      +3 años de experiencia. Desarrollador web de Buenos Aires, Argentina.
+      Especializado en crear aplicaciones únicas.
+    </h2>
+    <div class="flex gap-x-5 justify-center p-5">
+        <a href="https://www.linkedin.com/in/matias-vallejos-a10902260/" target="_blank"><LinkedIn class="icons"/></a>
+        <a href="https://github.com/vallejosmatias" target="_blank"><Github class="icons"></a>
+        <a href="https://www.instagram.com/vallejosmati/" target="_blank"><Instagram class="icons"/></a>
+    </div>
+   <div class="flex gap-x-5 justify-center p-5">
+    <Button href="/contact">Contact me</Button>
+    <Button href="/proyects">My proyects</Button>
+   </div>
+  </section>
+</Layout>
+
+<style>
+  .icons{
+    @apply w-6 h-6 opacity-80 hover:opacity-100;
+  } 

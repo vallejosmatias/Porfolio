@@ -1,0 +1,24 @@
+---
+const { href, type = 'button', target ='_self', class: className = ''} = Astro.props;
+---
+
+{href ? (
+  <a href={href} target={target} class={`btn ${className}`}>
+    <slot></slot>
+  </a>
+) : (
+  <button type={type} class={`btn ${className}`}>
+    <slot></slot>
+  </button>
+)}
+
+<style>
+  .btn {
+    @apply px-5 py-3 rounded-2xl ;
+    background-color: #141414;
+  }
+  .btn:hover{
+    @apply scale-110 bg-opacity-60;
+    background-color: #141414a2;
+  }
+</style>

@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import CardProyect from "../components/CardProyect.astro";
+---
+
+<Layout>    
+  <div class="container mx-auto p-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <CardProyect
+        image="/images/Captura de pantalla (60).png"
+        title="The brow army"
+        description="Página web desarrollada para un centro de estética. Incluye secciones informativas, contacto y una tienda en línea para productos relacionados. La interfaz está optimizada para ofrecer una experiencia fluida en dispositivos móviles y de escritorio, destacando la estética profesional y la identidad de la marca."
+        url="https://thebrowarmy.com/"
+        target="_blank"
+      />
+      <CardProyect
+        image="/images/Captura de pantalla (61).png"
+        title="Psiconline"
+        description="Página web creada para una plataforma de servicios psicológicos en línea. Diseñada para facilitar el acceso a información sobre terapias, consultas virtuales y recursos de bienestar emocional. Su estructura clara y profesional asegura una navegación intuitiva, adaptada tanto para dispositivos móviles como de escritorio."
+        url=" https://psicosonline.com/"
+         target="_blank"
+      />
+      <CardProyect
+        image="/images/Captura de pantalla (62).png"
+        title="Cube design & solutions"
+        description="Plataforma profesional enfocada en ofrecer servicios especializados en diseño web, optimización SEO y desarrollo de soluciones eCommerce. Diseñada para atraer a emprendedores y empresas que buscan potenciar su presencia digital, destaca por su enfoque estratégico, una estética moderna y una navegación intuitiva."
+        url=" https://lagoddess.me/"
+         target="_blank"
+      />
+    </div>
+  </div>
+</Layout>
+
