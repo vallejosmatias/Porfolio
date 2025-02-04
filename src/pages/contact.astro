@@ -7,30 +7,24 @@ import Instagram from "../components/icons/Instagram.astro";
 ---
 
 <Layout>
-  <section
-    class="w-full flex flex-col justify-center items-center gap-5"
-  >
-    <h2 class="text-xl">Contáctame</h2>
-    <p>¿Tenes un proyecto en mente? ¡Hablemos!</p>
-    <form name="contact" method="POST" data-netlify="true">
+  <section class="w-full min-h-screen flex flex-col justify-center items-center gap-5 p-5">
+    <h1 class="text-5xl font-bold text-center">Contáctame</h1>
+    <p class="text-xl opacity-80 text-center">
+      ¿Tenes un proyecto en mente? ¡Hablemos!
+    </p>
+    <form name="contact" method="POST" data-netlify="true" class="w-full max-w-md mx-auto flex flex-col gap-4">
       <input type="hidden" name="form-name" value="contact" />
-      <input
-        class="inputs"
-        type="text"
-        name="name"
-        placeholder="Tu nombre"
-        required
-      />
-      <input class="inputs" type="email" name="email" placeholder="Tu correo" required />
-      <input class="inputs" type="text" name="subject" placeholder="Asunto" />
-      <textarea placeholder="Tu mensaje" name="message" required></textarea>
+      <input class="inputs w-full p-2 border border-gray-300 rounded" type="text" name="name" placeholder="Tu nombre" required />
+      <input class="inputs w-full p-2 border border-gray-300 rounded" type="email" name="email" placeholder="Tu correo" required />
+      <input class="inputs w-full p-2 border border-gray-300 rounded" type="text" name="subject" placeholder="Asunto" />
+      <textarea class="inputs w-full p-2 border border-gray-300 rounded" name="message" placeholder="Tu mensaje" required></textarea>
       <Button type="submit">Enviar</Button>
     </form>
     <div class="flex gap-4 justify-center item text-center mt-10">
       <a href="https://www.linkedin.com/in/matias-vallejos-a10902260/" target="_blank"><LinkedIn class="icons"/></a>
       <a href="https://github.com/vallejosmatias" target="_blank"><Github class="icons"></a>
       <a href="https://www.instagram.com/vallejosmati/" target="_blank"><Instagram class="icons"/></a>
-      </div>
+    </div>
   <div class="w-full flex justify-evenly gap-5 mt-0">
         <p class="flex items-center">
           <strong><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"></path></svg>
@@ -47,23 +41,10 @@ import Instagram from "../components/icons/Instagram.astro";
 </Layout>
 
 <style>
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  .inputs {
+    @apply w-full border border-gray-300 rounded;
   }
-  textarea {
-    resize: none;
-    height: 100px;
-    border-radius: 10px;
-    padding: 10px;
-  }
-  .inputs{
-    width:20rem;
-    @apply rounded-lg px-4 py-2;
-  }
-
-.icons{
+  .icons {
     @apply w-6 h-6 opacity-80 hover:opacity-100;
-}
+  }
 </style>
