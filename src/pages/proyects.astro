@@ -4,7 +4,40 @@ import CardProyect from "../components/CardProyect.astro";
 ---
 
 <Layout>
+ 
+<section class="w-full min-h-screen flex flex-col justify-center items-center p-5">
+  <!-- Título de la sección -->
+  <h1 class="w-full flex ml-10 mb-5 text-xl justify-center">Proyectos Destacados</h1>
+
+  <!-- Grid de proyectos destacados -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <CardProyect
+      image="/images/bio.png"
+      title="Bio Balance"
+      description="Creación de reels, publicaciones y motion graphics para la marca de nutrientes. Producción audiovisual completa adaptada a Instagram y redes sociales."
+      url="https://www.instagram.com/biobalance_grow/"
+      target="_blank"
+    />
+    <CardProyect
+      image="/images/la-jefa-2.jpg"
+      title="La Jefa"
+      description="Encargado de toda la parte digital de la empresa: redes, reels, contenido audiovisual y promociones."
+      url="https://www.instagram.com/lajefa.ar/"
+      target="_blank"
+    />
+    <CardProyect
+      image="/images/wulop.jpeg"
+      title="WULOP (Paraguay y Uruguay)"
+      description="Cobertura audiovisual de 3 días de congreso de micropigmentación. Producción de videos resumen y reels promocionales."
+      url="https://www.instagram.com/wulop.paraguay/"
+      target="_blank"
+    />
+    <!-- Podés agregar más proyectos destacados siguiendo el mismo patrón -->
+  </div>
+</section>
+
   <section class="w-full min-h-screen flex flex-col justify-center items-center p-5">
+    <h1 class="w-full flex ml-10 mb-5 text-xl justify-center">Paginas web</h1>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <CardProyect
         image="/images/Captura de pantalla (60).png"
@@ -30,4 +63,51 @@ import CardProyect from "../components/CardProyect.astro";
      
     </div>
   </section>
+
+  <section class="w-full min-h-screen flex flex-col justify-center items-center p-5">
+  <!-- Título -->
+  <h1 class="w-full flex justify-center ml-10 mb-5 text-xl">Experiencia Laboral</h1>
+
+  <!-- Grid de experiencias -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    
+    <!-- Card de experiencia -->
+    <div class="flex flex-col gap-3 p-5 bg-[#42259265] rounded-2xl">
+      <h3 class="text-lg font-bold">La Jefa</h3>
+      <p class="italic text-sm text-gray-200">Encargado digital | 2022 - Actualidad</p>
+      <p class="text-xs">Encargado de toda la parte digital de la empresa: gestión de redes sociales, creación de reels, contenido audiovisual y promociones.</p>
+    </div>
+
+    <div class="flex flex-col gap-3 p-5 bg-[#42259265] rounded-2xl">
+      <h3 class="text-lg font-bold">Bio Balance</h3>
+      <p class="italic text-sm text-gray-200">Producción de contenido | 2021 - Actualidad</p>
+      <p class="text-xs">Creación de reels, publicaciones y motion graphics para Instagram y otras redes sociales, enfocando en el engagement y crecimiento de la marca.</p>
+    </div>
+
+    <div class="flex flex-col gap-3 p-5 bg-[#42259265] rounded-2xl">
+      <h3 class="text-lg font-bold">WULOP (Paraguay y Uruguay)</h3>
+      <p class="italic text-sm text-gray-200">Producción audiovisual | 2024</p>
+      <p class="text-xs">Cobertura de 3 días de congreso de micropigmentación: videos resumen, reels promocionales y edición de contenido para redes.</p>
+    </div>
+
+    <div class="flex flex-col gap-3 p-5 bg-[#42259265] rounded-2xl">
+      <h3 class="text-lg font-bold">La Liga Profesional De Fútbol Senior (AFA)</h3>
+      <p class="italic text-sm text-gray-200">Organización y producción de contenido | Enero - Julio 2025</p>
+      <p class="text-xs">Producción de reels, cobertura de partidos y gestión de contenido audiovisual para redes sociales.</p>
+    </div>
+
+    <div class="flex flex-col gap-3 p-5 bg-[#42259265] rounded-2xl">
+      <h3 class="text-lg font-bold">Veterinario Loreto</h3>
+      <p class="italic text-sm text-gray-200">Producción de contenido | Principio de 2025 - Actualidad</p>
+      <p class="text-xs">Creación de contenido audiovisual y reels promocionales para Instagram y redes de la veterinaria.</p>
+    </div>
+
+   <div class="flex flex-col gap-3 p-5 bg-[#42259265] rounded-2xl">
+  <h3 class="text-lg font-bold">Threedi</h3>
+  <p class="italic text-sm text-gray-200">Modelado 3D y producción de contenido | 2023 - Actualidad</p>
+  <p class="text-xs">Creación y modelado 3D de piezas para impresión, apoyo en la estrategia digital y diseño de contenido gráfico para redes sociales de la empresa de impresión 3D.</p>
+</div>
+
+  </div>
+</section>
 </Layout>
