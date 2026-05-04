@@ -7,94 +7,424 @@ import LinkedIn from "../components/icons/LinkedIn.astro";
 import Button from "../components/Button.astro";
 
 const skills = [
+  { name: "Photoshop", src: "/images/photoshop.svg" },
+  { name: "Illustrator", src: "/images/illustrator.svg" },
+  { name: "Canva", src: "/images/canva.svg" },
+  { name: "Premiere Pro", src: "/images/premiere.svg" },
+  { name: "After Effects", src: "/images/after-effects.svg" },
+  { name: "Fusion 360", src: "/images/fusion-360.png" },
+  { name: "Open IA", src: "/images/openai_dark.svg" },
+  { name: "Midjourney", src: "/images/midjourney.png" },
+  { name: "Runway", src: "/images/runway.svg" },
+  { name: "Freepik", src: "/images/freepik.jpg" }
+];
+
+const services = [
   {
-    name: "Photoshop",
-    src: "/images/photoshop.svg"
+    title: "Contenido audiovisual",
+    text: "Videos promocionales, piezas para redes, reels, motion graphics y contenido visual para marcas que necesitan verse más profesionales."
   },
   {
-    name: "Illustrator",
-    src: "/images/illustrator.svg"
+    title: "Creatividad con IA",
+    text: "Creación de imágenes, videos, escenas, conceptos visuales y piezas publicitarias usando herramientas de inteligencia artificial."
   },
   {
-    name: "Canva",
-    src: "/images/canva.svg"
+    title: "Diseño para marcas",
+    text: "Piezas gráficas, presentaciones, contenido comercial, campañas visuales y material digital adaptado a cada nicho."
   },
   {
-    name: "Premiere Pro",
-    src: "/images/premiere.svg"
-  },
-  {
-    name: "After Effects",
-    src: "/images/after-effects.svg"
-  },
-  {
-    name: "Fusion 360",
-    src: "/images/fusion-360.png"
-  },
-  {
-    name: "Open IA",
-    src: "/images/openai_dark.svg"
-  },
-  {
-    name: "Midjourney",
-    src: "/images/midjourney.png"
-  },
-  {
-    name: "Runway",
-    src: "/images/runway.svg"
-  },
-  {
-    name: "Freepik",
-    src: "/images/freepik.jpg"
+    title: "Web y landing pages",
+    text: "Desarrollo de páginas simples, landing pages, portfolio, sitios para eventos, marcas personales y proyectos comerciales."
   }
-]
+];
+
+const projects = [
+  {
+    title: "Copa América PMU",
+    category: "Evento / Landing / Dirección visual",
+    text: "Landing page y sistema visual para campeonato internacional de micropigmentación con estética temática, estructura comercial y contenido promocional."
+  },
+  {
+    title: "Bio Balance",
+    category: "Contenido / IA / Redes",
+    text: "Creación de piezas visuales, reels, imágenes de producto, campañas y contenido audiovisual para redes sociales."
+  },
+  {
+    title: "La Jefa Lab",
+    category: "Marca digital / Contenido",
+    text: "Gestión de contenido digital, piezas para redes, comunicación visual y soporte creativo para cursos y lanzamientos."
+  },
+  {
+    title: "Threedi",
+    category: "3D / Producto / E-commerce",
+    text: "Diseño, modelado y comunicación visual para productos impresos en 3D, con enfoque en objetos decorativos y funcionales."
+  }
+];
+
+const stats = [
+  { number: "+3", label: "años de experiencia" },
+  { number: "+20", label: "proyectos digitales" },
+  { number: "IA", label: "aplicada a contenido" },
+  { number: "360°", label: "visión creativa y técnica" }
+];
 ---
 
 <Layout>
-  <div class="relative min-h-screen">
-    <div class="absolute inset-0 -z-10 h-full w-full [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"></div>
-    <section class="w-full lg:w-[740px] mx-auto py-10 px-4">
-      <h1 class="flex flex-col lg:flex-row justify-center text-5xl font-bold gap-x-4 pb-4 text-center lg:text-left">
-        Hola, soy Matias
-        <div class="flex justify-center items-center mt-4 lg:mt-0">
-          <Badge>Disponible para trabajar</Badge>
+  <main class="relative min-h-screen overflow-hidden text-white">
+    <!-- Background -->
+    <div class="fixed inset-0 -z-20 bg-black"></div>
+    <div class="fixed inset-0 -z-10 [background:radial-gradient(125%_125%_at_50%_10%,#000_35%,#6633ee_100%)]"></div>
+    <div class="fixed left-1/2 top-0 -z-10 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-violet-600/20 blur-[120px]"></div>
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-black/40 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
+        <a href="#inicio" class="text-sm font-bold tracking-widest text-white">
+          MATIAS<span class="text-violet-400">.</span>
+        </a>
+
+        <div class="hidden items-center gap-6 text-sm text-white/70 md:flex">
+          <a href="#sobre-mi" class="hover:text-white">Sobre mí</a>
+          <a href="#servicios" class="hover:text-white">Servicios</a>
+          <a href="#proyectos" class="hover:text-white">Proyectos</a>
+          <a href="#contacto" class="hover:text-white">Contacto</a>
         </div>
-      </h1>
-      <h2 class="text-xl opacity-80 text-center lg:text-left">
-        +3 años de experiencia. Diseñador y creador de contenido digital en Buenos Aires, Argentina. Especializado en animaciones, videos promocionales y material audiovisual creado con el apoyo de herramientas de inteligencia artificial para marcas en nichos específicos.
-      </h2>
-      <div class="flex gap-x-5 justify-center p-5">
-        <a href="https://www.linkedin.com/in/matias-vallejos-a86319323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><LinkedIn class="icons" /></a>
-        <a href="https://github.com/vallejosmatias" target="_blank"><Github class="icons"></a>
-        <a href="https://www.instagram.com/vallejosmati/" target="_blank"><Instagram class="icons" /></a>
-        <a href="https://wa.me/5491153382624" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;"><path d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977 0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162-2.824.741.753-2.753-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188 7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73-.205-.075-.354-.112-.504.112s-.58.729-.711.879-.262.168-.486.056-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008.826.826 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321c.112.15 1.582 2.415 3.832 3.387.536.231.954.369 1.279.473.537.171 1.026.146 1.413.089.431-.064 1.327-.542 1.514-1.066.187-.524.187-.973.131-1.067-.056-.094-.207-.151-.43-.263"></path></svg></a>
+
+        <a
+          href="https://wa.me/5491153382624"
+          target="_blank"
+          class="rounded-full border border-white/15 px-4 py-2 text-sm font-medium text-white/90 transition hover:border-violet-400 hover:bg-violet-500/10"
+        >
+          Hablemos
+        </a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="inicio" class="mx-auto grid min-h-[88vh] max-w-6xl items-center gap-10 px-4 py-16 lg:grid-cols-[1.15fr_0.85fr]">
+      <div>
+        <div class="mb-6 flex flex-wrap items-center gap-3">
+          <Badge>Disponible para trabajar</Badge>
+          <span class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/70">
+            Buenos Aires, Argentina
+          </span>
+        </div>
+
+        <p class="mb-3 text-sm font-semibold uppercase tracking-[0.35em] text-violet-300">
+          Diseñador · Creador de contenido · IA
+        </p>
+
+        <h1 class="max-w-4xl text-5xl font-black leading-[0.95] tracking-tight md:text-7xl">
+          Creo contenido visual para marcas que quieren verse más profesionales.
+        </h1>
+
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-white/70 md:text-xl">
+          Soy Matias, diseñador y creador de contenido digital. Combino diseño, video,
+          animación, inteligencia artificial y desarrollo web para crear piezas visuales,
+          landings y campañas que ayudan a marcas de nicho a comunicar mejor.
+        </p>
+
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+          <Button href="#proyectos">Ver proyectos</Button>
+          <Button href="#contacto">Trabajemos juntos</Button>
+        </div>
+
+        <div class="mt-8 flex items-center gap-5">
+          <a
+            href="https://www.linkedin.com/in/matias-vallejos-a86319323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <LinkedIn class="icons" />
+          </a>
+
+          <a
+            href="https://github.com/vallejosmatias"
+            target="_blank"
+            aria-label="Github"
+          >
+            <Github class="icons" />
+          </a>
+
+          <a
+            href="https://www.instagram.com/vallejosmati/"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <Instagram class="icons" />
+          </a>
+
+          <a
+            href="https://wa.me/5491153382624"
+            target="_blank"
+            aria-label="WhatsApp"
+            class="opacity-80 transition hover:opacity-100"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-white" viewBox="0 0 24 24">
+              <path d="M18.403 5.633A8.919 8.919 0 0 0 12.053 3c-4.948 0-8.976 4.027-8.978 8.977 0 1.582.413 3.126 1.198 4.488L3 21.116l4.759-1.249a8.981 8.981 0 0 0 4.29 1.093h.004c4.947 0 8.975-4.027 8.977-8.977a8.926 8.926 0 0 0-2.627-6.35m-6.35 13.812h-.003a7.446 7.446 0 0 1-3.798-1.041l-.272-.162-2.824.741.753-2.753-.177-.282a7.448 7.448 0 0 1-1.141-3.971c.002-4.114 3.349-7.461 7.465-7.461a7.413 7.413 0 0 1 5.275 2.188 7.42 7.42 0 0 1 2.183 5.279c-.002 4.114-3.349 7.462-7.461 7.462m4.093-5.589c-.225-.113-1.327-.655-1.533-.73-.205-.075-.354-.112-.504.112s-.58.729-.711.879-.262.168-.486.056-.947-.349-1.804-1.113c-.667-.595-1.117-1.329-1.248-1.554s-.014-.346.099-.458c.101-.1.224-.262.336-.393.112-.131.149-.224.224-.374s.038-.281-.019-.393c-.056-.113-.505-1.217-.692-1.666-.181-.435-.366-.377-.504-.383a9.65 9.65 0 0 0-.429-.008.826.826 0 0 0-.599.28c-.206.225-.785.767-.785 1.871s.804 2.171.916 2.321c.112.15 1.582 2.415 3.832 3.387.536.231.954.369 1.279.473.537.171 1.026.146 1.413.089.431-.064 1.327-.542 1.514-1.066.187-.524.187-.973.131-1.067-.056-.094-.207-.151-.43-.263" />
+            </svg>
+          </a>
+        </div>
       </div>
-      <div class="flex flex-col lg:flex-row gap-4 justify-center items-center">
-        <Button href="/contact">Contact me</Button>
-        <Button href="/proyects">Projects</Button>
+
+      <!-- Hero Card -->
+      <aside class="relative">
+        <div class="absolute -inset-4 rounded-[2rem] bg-violet-500/20 blur-3xl"></div>
+
+        <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.06] p-6 shadow-2xl backdrop-blur-xl">
+          <div class="rounded-[1.5rem] border border-white/10 bg-black/40 p-6">
+            <p class="text-sm uppercase tracking-[0.3em] text-violet-300">
+              Marca personal
+            </p>
+
+            <h2 class="mt-4 text-3xl font-black">
+              Diseño, video, IA y web en una misma dirección.
+            </h2>
+
+            <p class="mt-4 text-sm leading-relaxed text-white/65">
+              No se trata solo de hacer algo lindo. Se trata de crear contenido con intención:
+              que explique, venda, posicione y haga que la marca se vea más fuerte.
+            </p>
+
+            <div class="mt-6 grid grid-cols-2 gap-3">
+              {stats.map((stat) => (
+                <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-4">
+                  <p class="text-2xl font-black text-white">{stat.number}</p>
+                  <p class="mt-1 text-xs text-white/55">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Skills Marquee -->
+    <section class="border-y border-white/10 bg-black/30 py-6">
+      <div class="mx-auto max-w-6xl overflow-hidden px-4">
+        <div class="skills-track flex w-max gap-4">
+          {[...skills, ...skills].map((skill) => (
+            <div class="flex min-w-40 items-center gap-3 rounded-full border border-white/10 bg-white/[0.05] px-4 py-3">
+              <img src={skill.src} alt={skill.name} class="h-7 w-7 object-contain" />
+              <span class="text-sm text-white/80">{skill.name}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
 
-<section class="w-full">
-  <h2 class="text-xl font-bold text-center mb-7 text-white">Habilidades Técnicas</h2>
-  <div class="flex flex-wrap justify-center gap-5">
-    {skills.map(skill => (
-      <div class="flex flex-col items-center justify-center bg-gray-800 rounded-xl p-3 w-20 h-28">
-        <div class="w-8 h-8 mb-2 flex items-center justify-center">
-          <img src={skill.src} alt={skill.name} class="w-full h-full object-contain"/>
-        </div>
-        <span class="text-xs text-center text-gray-200">{skill.name}</span>
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="mx-auto grid max-w-6xl gap-10 px-4 py-24 lg:grid-cols-[0.8fr_1.2fr]">
+      <div>
+        <p class="section-kicker">Sobre mí</p>
+        <h2 class="section-title">
+          Perfil creativo con mirada técnica.
+        </h2>
       </div>
-    ))}
-  </div>
-</section>
 
+      <div class="space-y-5 text-lg leading-relaxed text-white/70">
+        <p>
+          Trabajo en la creación de contenido digital para marcas, eventos y proyectos
+          que necesitan una presencia visual más sólida. Mi diferencial está en mezclar
+          diseño, edición, animación, IA y desarrollo web.
+        </p>
 
-  </div>
+        <p>
+          Puedo ayudarte desde la idea inicial hasta la pieza final: concepto, estética,
+          guion visual, imágenes, video, landing page y contenido para redes.
+        </p>
+
+        <p>
+          Me interesa trabajar con marcas que necesitan diferenciarse en nichos específicos:
+          estética, eventos, formación online, productos digitales, emprendimientos y marcas personales.
+        </p>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="mx-auto max-w-6xl px-4 py-24">
+      <div class="mb-12 max-w-3xl">
+        <p class="section-kicker">Qué hago</p>
+        <h2 class="section-title">
+          Servicios pensados para construir presencia digital.
+        </h2>
+      </div>
+
+      <div class="grid gap-5 md:grid-cols-2">
+        {services.map((service, index) => (
+          <article class="group rounded-[1.5rem] border border-white/10 bg-white/[0.05] p-6 transition hover:-translate-y-1 hover:border-violet-400/40 hover:bg-white/[0.08]">
+            <span class="text-sm font-bold text-violet-300">
+              0{index + 1}
+            </span>
+            <h3 class="mt-5 text-2xl font-bold">{service.title}</h3>
+            <p class="mt-3 leading-relaxed text-white/65">{service.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="mx-auto max-w-6xl px-4 py-24">
+      <div class="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+        <div class="max-w-3xl">
+          <p class="section-kicker">Portfolio</p>
+          <h2 class="section-title">
+            Proyectos y áreas donde aporté valor.
+          </h2>
+        </div>
+
+        <a
+          href="https://www.instagram.com/vallejosmati/"
+          target="_blank"
+          class="rounded-full border border-white/15 px-5 py-3 text-sm font-medium text-white/80 transition hover:border-violet-400 hover:text-white"
+        >
+          Ver más trabajos
+        </a>
+      </div>
+
+      <div class="grid gap-5 md:grid-cols-2">
+        {projects.map((project) => (
+          <article class="relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/40 p-6 transition hover:border-violet-400/40">
+            <div class="absolute right-0 top-0 h-32 w-32 rounded-full bg-violet-500/10 blur-3xl"></div>
+
+            <p class="text-sm font-medium text-violet-300">{project.category}</p>
+            <h3 class="mt-4 text-2xl font-black">{project.title}</h3>
+            <p class="mt-4 leading-relaxed text-white/65">{project.text}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <!-- Proceso -->
+    <section class="mx-auto max-w-6xl px-4 py-24">
+      <div class="rounded-[2rem] border border-white/10 bg-white/[0.05] p-6 md:p-10">
+        <div class="mb-10 max-w-3xl">
+          <p class="section-kicker">Cómo trabajo</p>
+          <h2 class="section-title">
+            Del concepto a la pieza final.
+          </h2>
+        </div>
+
+        <div class="grid gap-5 md:grid-cols-4">
+          <div class="process-card">
+            <span>01</span>
+            <h3>Entiendo la marca</h3>
+            <p>Analizo el objetivo, el público, el tono y el tipo de contenido que necesita.</p>
+          </div>
+
+          <div class="process-card">
+            <span>02</span>
+            <h3>Defino la idea visual</h3>
+            <p>Busco una dirección estética clara para que la pieza tenga intención.</p>
+          </div>
+
+          <div class="process-card">
+            <span>03</span>
+            <h3>Produzco el contenido</h3>
+            <p>Diseño, edito, genero recursos con IA o desarrollo la landing según el proyecto.</p>
+          </div>
+
+          <div class="process-card">
+            <span>04</span>
+            <h3>Optimizo el resultado</h3>
+            <p>Ajusto detalles para que el contenido se vea profesional y listo para publicar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="mx-auto max-w-6xl px-4 py-24">
+      <div class="grid gap-10 rounded-[2rem] border border-white/10 bg-black/50 p-6 md:p-10 lg:grid-cols-[1fr_0.8fr]">
+        <div>
+          <p class="section-kicker">Contacto</p>
+          <h2 class="section-title">
+            ¿Tenés una marca, evento o proyecto que necesita verse mejor?
+          </h2>
+
+          <p class="mt-5 max-w-2xl text-lg leading-relaxed text-white/70">
+            Escribime y vemos cómo puedo ayudarte a convertir una idea en una pieza visual,
+            una campaña, un video o una landing que se sienta profesional.
+          </p>
+        </div>
+
+        <div class="flex flex-col justify-center gap-4">
+          <a
+            href="https://wa.me/5491153382624"
+            target="_blank"
+            class="rounded-2xl bg-white px-6 py-4 text-center font-bold text-black transition hover:bg-violet-200"
+          >
+            Escribirme por WhatsApp
+          </a>
+
+          <a
+            href="mailto:contacto@matiasvallejos.com"
+            class="rounded-2xl border border-white/15 px-6 py-4 text-center font-bold text-white transition hover:border-violet-400 hover:bg-violet-500/10"
+          >
+            Enviar email
+          </a>
+
+          <div class="mt-4 flex justify-center gap-5">
+            <a href="https://www.linkedin.com/in/matias-vallejos-a86319323?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+              <LinkedIn class="icons" />
+            </a>
+            <a href="https://github.com/vallejosmatias" target="_blank">
+              <Github class="icons" />
+            </a>
+            <a href="https://www.instagram.com/vallejosmati/" target="_blank">
+              <Instagram class="icons" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>
 
 <style>
   .icons {
-    @apply w-6 h-6 opacity-80 hover:opacity-100;
+    @apply h-6 w-6 opacity-80 transition hover:opacity-100;
+  }
+
+  .section-kicker {
+    @apply mb-3 text-sm font-bold uppercase tracking-[0.35em] text-violet-300;
+  }
+
+  .section-title {
+    @apply text-4xl font-black leading-tight tracking-tight text-white md:text-5xl;
+  }
+
+  .process-card {
+    @apply rounded-2xl border border-white/10 bg-black/30 p-5;
+  }
+
+  .process-card span {
+    @apply text-sm font-bold text-violet-300;
+  }
+
+  .process-card h3 {
+    @apply mt-4 text-lg font-bold text-white;
+  }
+
+  .process-card p {
+    @apply mt-3 text-sm leading-relaxed text-white/60;
+  }
+
+  .skills-track {
+    animation: scrollSkills 28s linear infinite;
+  }
+
+  @keyframes scrollSkills {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 </style>
